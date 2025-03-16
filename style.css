@@ -1,0 +1,11 @@
+.ms-modal{
+    background-color: white;
+    padding: 20px;
+    border: 6px solid black;
+    min-height: 500px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
