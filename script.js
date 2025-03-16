@@ -17,11 +17,17 @@ const notes = JSON.parse(localStorage.getItem('test')) || [];
 printOnDom(notes)
 
 function addNote(){
+
     //BOTTONI
     const btnOpen = document.createElement('button')
     btnOpen.innerHTML = 'APRI'
     const btnDelete = document.createElement('button')
     btnDelete.innerHTML = 'ELIMINA'
+
+    btnDelete.addEventListener('click', function(){
+        notes.splice(note.id, 1);
+        localStorage.setItem('test', JSON.stringify(notes));
+    })
 
     //costruzione oggetto con titolo, nota e data - oggetto stampato tra 'le mie note'
     let note = {}
@@ -51,10 +57,17 @@ function printOnDom(arr){
         btnOpen.innerHTML = 'APRI'
         const btnDelete = document.createElement('button')
         btnDelete.innerHTML = 'ELIMINA'
+
+        btnDelete.addEventListener('click', function(){
+            notes.splice(i, 1);
+            localStorage.setItem('test', JSON.stringify(notes));
+        })
+        
         const li = document.createElement('li')
         li.innerHTML = arr[i].title + ' ' +  arr[i].date + ' '
         li.appendChild(btnDelete)
         li.appendChild(btnOpen)
         listNotes.appendChild(li)
     }
+    console.log(notes)
 }
