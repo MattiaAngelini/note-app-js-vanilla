@@ -12,11 +12,21 @@
     <main>
         <h1 class="text-center">Note App</h1>
         <div class="container"> 
-            <textarea id="user-note" style="min-width: 100%; min-height: 200px;"></textarea>
-            <div>
-                <button onclick="addNote()">AGGIUNGI NOTA</button>
-            </div>
 
+            <h3>Inserisci nota</h3>
+
+            <div>
+
+                <h5>Titolo:</h5> 
+                <input id="user-title-note" maxlength="20" type="text">
+                <textarea id="user-note" style="min-width: 100%; min-height: 200px;"></textarea>
+                <div>
+                    <button onclick="addNote()">AGGIUNGI NOTA</button>
+                </div>
+    
+
+            </div>
+           
             <div class="mt-5">
                 <h3>Le mie Note:</h3>
                 <ul id="list-note"></ul>
