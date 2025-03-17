@@ -1,11 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  main{
+    min-height: 100vh;
+    background-color: rgba(76, 76, 76, 0.738);
+    z-index: 10;
+}
+
+input, textarea{
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.ms-container{
+    width: 80%;
+    background-color: rgba(221, 218, 237, 0.789);
+    border-radius: 10px;
+    margin: 20px;
+}
+
 .ms-modal{
+    font-size: 30px;
     background-color: white;
-    padding: 20px;
-    border: 6px solid black;
-    min-height: 500px;
-    width: 600px;
+    border-radius: 10px;
+    padding: 40px;
+    border: 6px solid rgba(92, 91, 91, 0.738);
+    min-height: 70%;
+    min-width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 999;
 }
